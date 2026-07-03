@@ -18,6 +18,15 @@ export const projects: Project[] = [
       "A perception-to-manipulation system built on xLeRobot hardware with RGB-D sensing, camera-to-base transforms, and task-based inverse kinematics.",
   },
   {
+    repo: "clickandwhirr.com",
+    href: "https://clickandwhirr.com",
+    title: "Click & Whirr",
+    subtitle: "Web platform for learning robotics through code and simulation",
+    timeframe: "2025 - Present",
+    summary:
+      "An interactive learning platform where students write code and run robotics simulations in the browser, with guided lessons and progress that syncs across devices.",
+  },
+  {
     repo: "ranegray/ros2-racer",
     href: "https://github.com/ranegray/ros2-racer",
     title: "ROS2 Racer",
