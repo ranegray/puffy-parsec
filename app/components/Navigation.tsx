@@ -32,6 +32,14 @@ export default function Navigation() {
         >
           GitHub
         </a>
+        <a
+          href="/rane-gray-resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+          className="text-fg-dim transition-colors hover:text-fg"
+        >
+          Resume
+        </a>
       </div>
     </nav>
   );

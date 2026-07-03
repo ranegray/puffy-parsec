@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { projects } from "@/lib/projects";
 import ProjectCard from "./components/ProjectCard";
 import { site } from "@/lib/site";
@@ -12,20 +11,18 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="space-y-16">
-      <section>
-        <div className="relative mb-10 aspect-video w-full overflow-hidden rounded-lg border border-border bg-bg-subtle/40">
-          <Image
-            src="/images/hero-minimal.png"
-            alt="Minimal dark abstract texture with subtle warm highlights"
-            fill
-            priority
-            sizes="(min-width: 1024px) 1024px, 100vw"
-            className="object-cover"
-          />
-        </div>
-
+      <section className="pt-8 sm:pt-14">
         <h1 className="max-w-3xl font-[family-name:var(--font-heading)] text-4xl leading-tight text-fg sm:text-5xl">
-          Robotics researcher at the Correll Lab.
+          Robotics researcher at the{" "}
+          <a
+            href={site.lab.href}
+            target="_blank"
+            rel="noreferrer"
+            className="underline decoration-accent-gold decoration-2 underline-offset-8 transition-colors hover:text-accent-gold"
+          >
+            Correll Lab
+          </a>
+          .
         </h1>
 
         <p className="mt-6 max-w-2xl text-base leading-7 text-fg-dim">
@@ -65,7 +62,7 @@ export default function Home() {
 
       <section>
         <h2 className="mb-4 font-[family-name:var(--font-heading)] text-2xl text-fg">
-          Selected
+          Publications &amp; Awards
         </h2>
 
         <a

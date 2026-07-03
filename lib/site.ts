@@ -35,6 +35,7 @@ export const site = {
   },
   lab: {
     name: "Correll Lab, CU Boulder",
+    href: "https://www.colorado.edu/lab/correll",
     since: "Since February 2025",
     highlights: [
       "Head and neck pan-tilt subsystem for the Unitree H1-2 humanoid, from mechanism design through ROS 2 control and platform validation.",

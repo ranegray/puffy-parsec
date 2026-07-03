@@ -53,3 +53,6 @@ public/images/ros2-racer-v2.png
 public/images/webots-rl.png
 public/images/webots-rl-v2.png
 public/images/webots-rl-v3.png
+
+# claude code local config
+.claude/
