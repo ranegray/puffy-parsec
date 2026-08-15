@@ -29,9 +29,9 @@ export default function Home() {
           I work across perception, manipulation, and autonomy, with a growing
           focus on agentic systems and their limitations on low-cost hardware.
           The pull, like much of the field, is general-purpose physical
-          intelligence. Currently an undergrad at CU Boulder. Senior thesis on
-          embodied agentic AI starts fall 2026. Master&apos;s in robotics
-          fall 2027.
+          intelligence. Currently an undergrad at CU Boulder, graduating spring
+          2027, with a senior thesis on embodied agentic AI underway and
+          part-time robotics engineering at Ricoh.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-5 text-sm">
@@ -89,6 +89,28 @@ export default function Home() {
             {site.award.description}
           </p>
         </div>
+      </section>
+
+      <section id="engineering" className="scroll-mt-10">
+        <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+          <h2 className="font-[family-name:var(--font-heading)] text-2xl text-fg">
+            Engineering
+          </h2>
+          <p className="text-xs text-fg-dim">
+            {site.work.name} &middot; {site.work.since}
+          </p>
+        </div>
+
+        <ul className="space-y-4 border-t border-border pt-5 text-sm leading-7 text-fg-dim">
+          {site.work.highlights.map((highlight) => (
+            <li key={highlight} className="flex gap-3">
+              <span aria-hidden="true" className="text-accent-gold">
+                &middot;
+              </span>
+              <span>{highlight}</span>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section id="research" className="scroll-mt-10">

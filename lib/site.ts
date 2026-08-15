@@ -33,6 +33,17 @@ export const site = {
     description:
       "Fine-tuned SmolVLA on 50 teleoperated drawing demonstrations and evaluated natural-language instruction-following on real SO-101 hardware.",
   },
+  work: {
+    name: "Ricoh USA",
+    role: "Robotics Engineering Intern, continuing part-time",
+    since: "Since May 2026",
+    highlights: [
+      "Physics-based digital twin of an industrial palletizing cell in NVIDIA Isaac Sim and Omniverse, built from production CAD into a tuned USD scene and driven by the real control software unmodified, so code changes no longer require the physical cell in order to be tested.",
+      "Validated the twin's placement accuracy by hand against the real cell across 101 parts, 4 runs, and both pallet positions: roughly 2 mm mean error against a 10 mm job tolerance, repeatable to about 0.1 mm.",
+      "Regression CI for the twin, diffing automated simulation runs against known-good baselines on validation-derived thresholds, alongside LLM-based automated code review on merge requests.",
+      "Synthetic data generation from simulation to produce labeled training data for vision models.",
+    ],
+  },
   lab: {
     name: "Correll Lab, CU Boulder",
     href: "https://www.colorado.edu/lab/correll",

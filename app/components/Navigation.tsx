@@ -13,6 +13,12 @@ export default function Navigation() {
 
       <div className="flex flex-wrap items-center gap-5 text-sm">
         <Link
+          href="/#engineering"
+          className="text-fg-dim transition-colors hover:text-fg"
+        >
+          Engineering
+        </Link>
+        <Link
           href="/#research"
           className="text-fg-dim transition-colors hover:text-fg"
         >

@@ -49,7 +49,7 @@ export const projects: Project[] = [
     summary:
       "A modular ROS 2 workspace for autonomous racing experiments with sensor bringup, reactive navigation, and a live telemetry dashboard.",
     image: {
-      src: "/images/ros2-racer-v2.png",
+      src: "/images/ros2-racer-v2.jpg",
       alt: "Roomba-based robot with a lidar and camera tower driving across a wood floor",
     },
   },
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     summary:
       "A reinforcement learning experiment in Webots that trains an e-puck to navigate a track using discretized infrared observations and reward shaping.",
     image: {
-      src: "/images/webots-rl-v3.png",
+      src: "/images/webots-rl-v3.jpg",
       alt: "Overhead view of a simulated e-puck robot navigating a walled track in Webots with a magnified inset",
     },
   },
