@@ -4,8 +4,7 @@ import ProjectCard from "./components/ProjectCard";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  description:
-    "Rane Gray, robotics researcher at the Correll Lab, CU Boulder. Embodied agentic AI, perception, and manipulation.",
+  description: site.description,
 };
 
 export default function Home() {
@@ -13,25 +12,31 @@ export default function Home() {
     <div className="space-y-16">
       <section className="pt-8 sm:pt-14">
         <h1 className="max-w-3xl font-[family-name:var(--font-heading)] text-4xl leading-tight text-fg sm:text-5xl">
-          Robotics researcher at the{" "}
-          <a
-            href={site.lab.href}
-            target="_blank"
-            rel="noreferrer"
-            className="underline decoration-accent-gold decoration-2 underline-offset-8 transition-colors hover:text-accent-gold"
-          >
-            Correll Lab
-          </a>
+          Building robots, simulating them, and studying where they{" "}
+          <span className="underline decoration-accent-gold decoration-2 underline-offset-8">
+            fail
+          </span>
           .
         </h1>
 
         <p className="mt-6 max-w-2xl text-base leading-7 text-fg-dim">
-          I work across perception, manipulation, and autonomy, with a growing
-          focus on agentic systems and their limitations on low-cost hardware.
           The pull, like much of the field, is general-purpose physical
-          intelligence. Currently an undergrad at CU Boulder, graduating spring
-          2027, with a senior thesis on embodied agentic AI underway and
-          part-time robotics engineering at Ricoh.
+          intelligence: robots that work outside the lab. I have come at it from
+          a few directions so far and expect to come at it from more. At{" "}
+          <span className="text-fg">Ricoh</span> I build validated digital twins
+          of production robot cells. At the{" "}
+          <a
+            href={site.lab.href}
+            target="_blank"
+            rel="noreferrer"
+            className="text-fg underline decoration-accent-gold decoration-2 underline-offset-4 transition-colors hover:text-accent-gold"
+          >
+            Correll Lab
+          </a>{" "}
+          I work on perception and manipulation for humanoids. My senior thesis
+          asks whether an agent that can see its own failures can buy back the
+          reliability cheap actuators give away. Undergrad at CU Boulder,
+          graduating spring 2027.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-5 text-sm">
@@ -60,34 +65,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <h2 className="mb-4 font-[family-name:var(--font-heading)] text-2xl text-fg">
-          Publications &amp; Awards
-        </h2>
+      <section id="thesis" className="scroll-mt-10">
+        <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+          <h2 className="font-[family-name:var(--font-heading)] text-2xl text-fg">
+            {site.thesis.label}
+          </h2>
+          <p className="text-xs text-fg-dim">{site.thesis.timeframe}</p>
+        </div>
 
-        <a
-          href={site.paper.href}
-          target="_blank"
-          rel="noreferrer"
-          className="group block border-t border-border py-5 transition-colors hover:border-accent-gold"
-        >
-          <p className="text-xs text-fg-dim">{site.paper.venue}</p>
-          <p className="mt-2 font-[family-name:var(--font-heading)] text-xl leading-snug text-fg group-hover:text-accent-gold">
-            {site.paper.title}
+        <div className="border-t border-border pt-5">
+          <p className="font-[family-name:var(--font-heading)] text-xl leading-snug text-fg">
+            {site.thesis.title}
           </p>
-          <p className="mt-2 text-sm leading-6 text-fg-dim">
-            {site.paper.authors}
-          </p>
-        </a>
+          <p className="mt-1 text-xs text-fg-dim">{site.thesis.advisor}</p>
 
-        <div className="block border-t border-border py-5">
-          <p className="text-xs text-fg-dim">{site.award.venue}</p>
-          <p className="mt-2 font-[family-name:var(--font-heading)] text-xl leading-snug text-fg">
-            {site.award.title}
-          </p>
-          <p className="mt-2 text-sm leading-6 text-fg-dim">
-            {site.award.description}
-          </p>
+          {site.thesis.body.map((paragraph) => (
+            <p
+              key={paragraph}
+              className="mt-4 max-w-2xl text-sm leading-7 text-fg-dim"
+            >
+              {paragraph}
+            </p>
+          ))}
         </div>
       </section>
 
@@ -135,6 +134,37 @@ export default function Home() {
         </ul>
       </section>
 
+      <section>
+        <h2 className="mb-4 font-[family-name:var(--font-heading)] text-2xl text-fg">
+          Publications &amp; Awards
+        </h2>
+
+        <a
+          href={site.paper.href}
+          target="_blank"
+          rel="noreferrer"
+          className="group block border-t border-border py-5 transition-colors hover:border-accent-gold"
+        >
+          <p className="text-xs text-fg-dim">{site.paper.venue}</p>
+          <p className="mt-2 font-[family-name:var(--font-heading)] text-xl leading-snug text-fg group-hover:text-accent-gold">
+            {site.paper.title}
+          </p>
+          <p className="mt-2 text-sm leading-6 text-fg-dim">
+            {site.paper.authors}
+          </p>
+        </a>
+
+        <div className="block border-t border-border py-5">
+          <p className="text-xs text-fg-dim">{site.award.venue}</p>
+          <p className="mt-2 font-[family-name:var(--font-heading)] text-xl leading-snug text-fg">
+            {site.award.title}
+          </p>
+          <p className="mt-2 text-sm leading-6 text-fg-dim">
+            {site.award.description}
+          </p>
+        </div>
+      </section>
+
       <section id="projects" className="scroll-mt-10">
         <h2 className="mb-4 font-[family-name:var(--font-heading)] text-2xl text-fg">
           Projects
@@ -149,9 +179,9 @@ export default function Home() {
 
       <section>
         <h2 className="mb-4 font-[family-name:var(--font-heading)] text-2xl text-fg">
-          Previously
+          Before robotics
         </h2>
-        <p className="border-t border-border pt-5 text-sm leading-7 text-fg-dim">
+        <p className="max-w-2xl border-t border-border pt-5 text-sm leading-7 text-fg-dim">
           {site.previously}
         </p>
       </section>

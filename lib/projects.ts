@@ -40,30 +40,4 @@ export const projects: Project[] = [
       alt: "Click & Whirr lesson workspace with a Python code editor beside a simulated robot following a curved line",
     },
   },
-  {
-    repo: "ranegray/ros2-racer",
-    href: "https://github.com/ranegray/ros2-racer",
-    title: "iRobot Create 3",
-    subtitle: "Autonomy stack and telemetry dashboard for a small racecar",
-    timeframe: "2026",
-    summary:
-      "A modular ROS 2 workspace for autonomous racing experiments with sensor bringup, reactive navigation, and a live telemetry dashboard.",
-    image: {
-      src: "/images/ros2-racer-v2.jpg",
-      alt: "Roomba-based robot with a lidar and camera tower driving across a wood floor",
-    },
-  },
-  {
-    repo: "ranegray/webots_rl",
-    href: "https://github.com/ranegray/webots_rl",
-    title: "Mobile Robot RL",
-    subtitle: "Q-learning controller for e-puck track navigation",
-    timeframe: "2025",
-    summary:
-      "A reinforcement learning experiment in Webots that trains an e-puck to navigate a track using discretized infrared observations and reward shaping.",
-    image: {
-      src: "/images/webots-rl-v3.jpg",
-      alt: "Overhead view of a simulated e-puck robot navigating a walled track in Webots with a magnified inset",
-    },
-  },
 ];

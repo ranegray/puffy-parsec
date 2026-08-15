@@ -3,7 +3,7 @@ export const site = {
   url: "https://ranegray.com",
   email: "ranegray@outlook.com",
   description:
-    "Robotics researcher at the Correll Lab, CU Boulder. Embodied agentic AI, perception, and manipulation.",
+    "Rane Gray builds robots, simulates them, and studies where they fail. Robotics research at the Correll Lab, CU Boulder, and digital twin engineering at Ricoh.",
   location: "Boulder, CO",
   socialLinks: [
     {
@@ -33,6 +33,16 @@ export const site = {
     description:
       "Fine-tuned SmolVLA on 50 teleoperated drawing demonstrations and evaluated natural-language instruction-following on real SO-101 hardware.",
   },
+  thesis: {
+    label: "What I am working on now",
+    title: "Agentic Test-Time Compute for Low-Cost Robotics",
+    timeframe: "Senior thesis, Aug 2026 to May 2027",
+    advisor: "Advised by Prof. Nikolaus Correll",
+    body: [
+      "Cheap servos have backlash, deadband, and calibration drift. The usual answer is better servos. I am testing a different one: give a coding agent the ability to observe what actually happened, diff it against what it intended, and retry. Then measure how much of the lost reliability comes back, and what it costs in tokens.",
+      "The interesting part is not whether it works. It is where it stops. Some failures leave a reversible, observable trace and can be recovered. Others happen inside a motion, faster than a turn boundary, and cannot. And some, like safety, state, and protocol, should never be handed to an agent no matter how much compute is available. Mapping that boundary is the thesis.",
+    ],
+  },
   work: {
     name: "Ricoh USA",
     role: "Robotics Engineering Intern, continuing part-time",
@@ -55,5 +65,5 @@ export const site = {
     ],
   },
   previously:
-    "Ten years in the Air Force and Colorado Air National Guard as an F-16 avionics systems expert. Led a 23-person team sustaining mission-ready aircraft across Arizona, South Korea, Germany, and Colorado.",
+    "Ten years as an F-16 avionics systems expert in the Air Force and Colorado Air National Guard, across Arizona, South Korea, Germany, and Colorado. I led a 23-person team keeping mission-critical electronics working on aircraft that could not fail. That is most of why I care about the boundary between what a system can be trusted to recover from and what it must never be allowed to try.",
 } as const;
